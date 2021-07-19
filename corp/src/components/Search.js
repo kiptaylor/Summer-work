@@ -3,6 +3,7 @@ import './HeroPage.css'
 import BigBox from './BigBox';
 import IntegerInput from '../Input';
 import logo from './logo.png';
+import { render } from '@testing-library/react';
 
 <img src={logo} height={100} width={100} />
 
@@ -11,7 +12,7 @@ const Search = () => {
     const [value, setValue] = useState(0);
     const buttonOnClick = (event) => {
         event.preventDefault();
-        fetch(`http://localhost:8080/api/skeleton/po?po-number=${value}`)
+        fetch(`http://localhost:8080/api/coupa_reinjection/po?po-number=${value}`)
             .then(response => response.json())
             .then((result) => {
                 setData(result)
@@ -19,7 +20,6 @@ const Search = () => {
                 console.log('error occurred: ', error)
             })
     }
-
     return (
         <form action="/" method="get">
             <label htmlFor="header-search">
@@ -37,7 +37,7 @@ const Search = () => {
                 </button>
             <div>
 
-                {data !== null && <BigBox text={data} />}
+                {data !== null && data !== undefined && <BigBox data={data} />}
 
             </div>
             <button
