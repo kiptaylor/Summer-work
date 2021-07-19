@@ -13,8 +13,10 @@ const GetLocalDatas = ({data}) => {
             return (
                 <div key= {po.id}>
                     <div>ID: {po.id}</div>
-                    <div>Title: {po.title}</div>
-                    <div>Body: {po.body}</div>
+                    <div>Part Name:{po.orderLines.orderLine[0].description}</div>
+                    <div>Source Part Number:{po.orderLines.orderLine[0].sourcePartNum}</div>
+                    <div>How Many Ordered: {po.orderLines.orderLine[0].quantity}</div>
+                    
                     <hr />
                 </div>
             )
