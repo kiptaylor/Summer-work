@@ -1,27 +1,20 @@
-import React from 'react';
+// import React from 'react';
 
 
-const GetLocalDatas = ({data}) => {
-    // return(
-    // <div >
-    //    {console.log(JSON.stringify(data))}
-    // </div>
-    // )
-    return (
-        <div id='big-box'>
-            {data.orderHeader.map((po) => {
-            return (
-                <div key= {po.id}>
-                    <div>ID: {po.id}</div>
-                    <div>Title: {po.title}</div>
-                    <div>Body: {po.body}</div>
-                    <hr />
-                </div>
-            )
-        })}
-        </div>
-    )
+// const BigBox = ({text}) => {
+//     return (
+//         // <div>{JSON.stringify(text)}</div>
 
-}
+//         text.map((po) => {
+//             return (
+//                 <>
+//                     <div>ID: {po.id}</div>
+//                     <div>SourcePartNumber:{po.orderLines.orderLine.sourcePartNum[1]}</div>
+//                     <hr />
+//                 </>
+//             )
+//         })
+//         )
+// }
   
-  export default GetLocalDatas;
+//   export default BigBox;
