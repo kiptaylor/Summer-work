@@ -7,7 +7,7 @@ import { CssBaseline } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
       height: '100vh',
-      backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/terminix-tech-homepage-banner.png'})`,
+      backgroundImage: `url(${process.env.PUBLIC_URL + './assets/terminix-tech-homepage-banner.jpg'})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
   },
