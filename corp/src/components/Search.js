@@ -5,12 +5,10 @@ import IntegerInput from '../Input';
 import logo from './logo.png';
 import { render } from '@testing-library/react';
 
-<img src={logo} height={100} width={100} />
+
 
 const Search = () => {
-    state ={
-        errorMessage = ''
-    }
+
     const [data, setData] = React.useState(null)
     const [value, setValue] = useState(0);
     const [err, setError] = useState(false);
@@ -20,16 +18,23 @@ const Search = () => {
             .then(response => response.json())
             .then((result) => {
                 setData(result)
-            }) .catch(err => 
-                useState({errorMessage: err.messege}))
+            }) .catch(responseError => 
+                setError(responseError))
+                // err = responseError
+            }
     return (
         <form action="/" method="get">
             <label htmlFor="header-search">
                 <header>
                 <img className='logo' src={logo} alt=""/>
-                </header>
-                {setError(errorMessage &&
-                <h3 className="error"> { useState(err) } </h3>) }
+                </header >
+                {
+                    err !== false ? 
+                    <div>
+                        Error is found
+                    </div>
+                 : null
+                    }
                 <span className="visually-hidden">Input PO Number: </span>
             </label>
             < IntegerInput value={ value } min={-1} max={999999999} onChange={ (value) => setValue(value) }
