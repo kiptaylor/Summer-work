@@ -46,3 +46,19 @@ body:after {
   height: 200px;
   margin-top: -57px;
 }
+#error-true {
+  border: 1px solid black;
+  background-color: white;
+  max-width: 800px;
+  height: auto;
+  padding: 5px;
+  padding-bottom: 0px;
+  margin: auto;
+  margin-top: 50px;
+}
+#loading-true {
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+  padding-top : 15px;
+}

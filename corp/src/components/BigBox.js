@@ -11,6 +11,7 @@ const GetLocalDatas = ({data}) => {
         <div id='big-box'>
             {data.orderHeader.map((po) => {
             return (
+                
                 <div key= {po.id}>
                     <div>ID: {po.id}</div>
                     <div>Part Name:{po.orderLines.orderLine[0].description}</div>
